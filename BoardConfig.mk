@@ -45,6 +45,13 @@ BOARD_MESA3D_GALLIUM_DRIVERS := kmsro r300 r600 nouveau freedreno swrast v3d vc4
 BOARD_MESA3D_VULKAN_DRIVERS := broadcom freedreno panfrost swrast virtio amd
 endif
 
+# Libcamera
+# Depends of Glodroid AOSP EXT Kati Files
+BOARD_BUILD_AOSPEXT_LIBCAMERA := true
+BOARD_LIBCAMERA_SRC_DIR := platform/external/libcamera-softisp
+BOARD_LIBCAMERA_IPAS := ipu3 simple rkisp1 rpi/vc4 simple vimc
+BOARD_LIBCAMERA_PIPELINES := all
+
 # Filesystem
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true

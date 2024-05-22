@@ -46,10 +46,22 @@ PRODUCT_COPY_FILES += \
 # Camera
 USE_CAMERA_V4L2_HAL := true
 
+ifeq ($(USE_CAMERA_V4L2_HAL),true)
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     camera.v4l2
+endif
+
+ifeq ($(BOARD_BUILD_AOSPEXT_LIBCAMERA),true)
+# Libcamera camera HAL
+PRODUCT_PACKAGES += \
+    ipa_ipu3.so ipa_ipu3.so.sign ipa_rkisp1.so ipa_rkisp1.so.sign ipa_rpi_vc4.so ipa_rpi_vc4.so.sign ipa_soft_simple.so ipa_soft_simple.so.sign libcamera-hal.so libgstlibcamera.so \
+    camera.libcamera libcamera libcamera-base libcamera-cam lc-compliance \
+    android.hardware.camera.provider@2.5-service_64 libdav1d dav1d \
+
+PRODUCT_PROPERTY_OVERRIDES += ro.hardware.camera=libcamera
+endif
 
 # Display
 PRODUCT_PACKAGES += \
