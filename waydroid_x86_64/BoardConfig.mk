@@ -26,6 +26,6 @@ TARGET_2ND_ARCH := x86
 TARGET_2ND_ARCH_VARIANT := x86_64
 
 ifneq ($(TARGET_USE_MESA),false)
-BOARD_MESA3D_GALLIUM_DRIVERS += i915 iris crocus
-BOARD_MESA3D_VULKAN_DRIVERS += intel intel_hasvk
+BOARD_MESA3D_GALLIUM_DRIVERS += i915 iris crocus virgl
+BOARD_MESA3D_VULKAN_DRIVERS += intel intel_hasvk venus
 endif
