@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit some common ROM stuff
-$(call inherit-product-if-exists, vendor/lineage/config/common_full_tablet_wifionly.mk)
-$(call inherit-product-if-exists, vendor/bliss/config/common_full_tablet_wifionly.mk)
+$(call inherit-product-if-exists, vendor/lineage/config/common_mini_tablet_wifionly.mk.mk)
+$(call inherit-product-if-exists, vendor/bliss/config/common_mini_tablet_wifionly.mk.mk)
 
 # Enable automatic partition size
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
