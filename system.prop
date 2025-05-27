@@ -51,6 +51,7 @@ ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
 ro.lmk.use_minfree_levels=true
 
+#Move it to device.mk your motherfucker and don't use it in 32bits targets dumb.
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
