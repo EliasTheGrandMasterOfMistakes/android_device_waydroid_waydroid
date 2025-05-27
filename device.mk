@@ -25,6 +25,9 @@ $(call inherit-product-if-exists, vendor/bliss/config/common_full_tablet_wifionl
 # Enable automatic partition size
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
+# Disable Postrender Cleanup
+TARGET_DISABLE_POSTRENDER_CLEANUP := true
+
 # Audio HAL
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
